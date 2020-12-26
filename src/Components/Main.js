@@ -3,7 +3,12 @@ import Emails from "./Emails";
 
 const Main = () => {
   return (
-    <main>
+    <main
+      className="flex"
+      style={{
+        height: window.innerHeight - 67,
+      }}
+    >
       <SideBar />
       <div className="emails">
         <Emails />
