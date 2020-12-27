@@ -18,20 +18,25 @@ const EmailsSection = (props) => {
   return (
     <section>
       {emails ? (
-        <>
-          <Route path="/" exact>
-            <div className="p-3 w-full border-b">
-              <div className="flex justify-between items-center">
-                <div></div>
-                <div className="">{emails.length}</div>
+        <div
+          className={"overflow-hidden"}
+          style={{ height: window.innerHeight - 67 }}
+        >
+          <div className="overflow-y-scroll h-full">
+            <Route path="/" exact>
+              <div className="p-3 w-full border-b">
+                <div className="flex justify-between items-center">
+                  <div></div>
+                  <div className="">{emails.length}</div>
+                </div>
               </div>
-            </div>
-            <Emails emails={emails} />
-          </Route>
-          <Route path="/r/:subreddit/comments/:id/:perma/">
-            <Email />
-          </Route>
-        </>
+              <Emails emails={emails} />
+            </Route>
+            <Route path="/r/:subreddit/comments/:id/:perma/">
+              <Email />
+            </Route>
+          </div>
+        </div>
       ) : (
         <div></div>
       )}
