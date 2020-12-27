@@ -59,7 +59,7 @@ const NavBar = () => {
               <div className="w-10 h-10 mx-2 rounded-full hover:bg-gray-100 ease-in duration-200">
                 <div className="p-2">
                   <svg
-                    class="fill-current text-gray-600"
+                    className="fill-current text-gray-600"
                     focusable="false"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -74,7 +74,7 @@ const NavBar = () => {
               <div className="w-10 h-10 mx-1 rounded-full hover:bg-gray-100 ease-in duration-200">
                 <div className="p-2">
                   <svg
-                    class="fill-current text-gray-600"
+                    className="fill-current text-gray-600"
                     focusable="false"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"

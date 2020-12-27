@@ -4,7 +4,7 @@ const SideList = (props) => {
   return (
     <ul className="list">
       {props.list.map((item) => {
-        return <ListItem item={item} />;
+        return <ListItem item={item} key={item} />;
       })}
     </ul>
   );
