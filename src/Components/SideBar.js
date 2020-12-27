@@ -2,7 +2,7 @@ import SideList from "./SideList";
 
 const SideBar = () => {
   return (
-    <div className="w-80 border-r">
+    <div className="w-64 border-r">
       <div className="w-full">
         <div className="p-4 mb-5">
           <button className="px-5 py-2 rounded-full bg-white shadow-md border focus:outline-none hover:shadow-lg">
