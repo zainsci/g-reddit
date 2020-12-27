@@ -1,5 +1,5 @@
 import SideBar from "./SideBar";
-import Emails from "./Emails";
+import EmailsSection from "./EmailsSection";
 
 const Main = () => {
   return (
@@ -11,7 +11,7 @@ const Main = () => {
     >
       <SideBar />
       <div className="emails">
-        <Emails />
+        <EmailsSection />
       </div>
     </main>
   );
