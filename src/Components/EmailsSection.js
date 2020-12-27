@@ -28,7 +28,7 @@ const EmailsSection = (props) => {
             </div>
             <Emails emails={emails} />
           </Route>
-          <Route path="/r/">
+          <Route path="/r/:subreddit/comments/:id/:perma/">
             <Email />
           </Route>
         </>
