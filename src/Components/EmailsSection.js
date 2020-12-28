@@ -20,7 +20,7 @@ const EmailsSection = (props) => {
       {emails ? (
         <div
           className={"overflow-hidden"}
-          style={{ height: window.innerHeight - 67 }}
+          style={{ height: window.innerHeight - 68 }}
         >
           <Route path="/" exact>
             <div className="py-1 px-2 w-full border-b">
@@ -72,7 +72,10 @@ const EmailsSection = (props) => {
                 <div className="">{emails.length}</div>
               </div>
             </div>
-            <div className="overflow-y-scroll h-full">
+            <div
+              className="overflow-y-scroll"
+              style={{ height: window.innerHeight - (68 + 50) }}
+            >
               <Emails emails={emails} />
             </div>
           </Route>
