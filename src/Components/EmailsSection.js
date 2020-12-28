@@ -16,7 +16,7 @@ const EmailsSection = (props) => {
   }, []);
 
   return (
-    <section>
+    <section style={{ maxWidth: props.width }}>
       {emails ? (
         <div
           className={"overflow-hidden"}
