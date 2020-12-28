@@ -10,7 +10,7 @@ const Main = () => {
       }}
     >
       <SideBar />
-      <div className="emails">
+      <div className="w-full">
         <EmailsSection />
       </div>
     </main>
