@@ -2,7 +2,7 @@ const DotsVertical = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="fill-current w-4 h-4"
+      className="fill-current w-4 h-4"
       viewBox="0 0 16 16"
       title="More"
     >
