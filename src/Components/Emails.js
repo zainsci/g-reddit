@@ -5,14 +5,14 @@ const Emails = (props) => {
   const emails = props.emails.emails;
 
   const getTime = (timestamp) => {
-    console.log(timestamp);
-    const d = new Date(timestamp);
-    console.log(d.toLocaleString());
+    const d = new Date(timestamp * 1000);
     const date = d.getDate();
-    const month = d.getMonth();
-    const time = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+    const month = d.getUTCMonth();
+    const time = `${d.getHours() % 12}:${d.getMinutes()}${
+      d.getHours() > 12 ? "PM" : "AM"
+    }`;
     console.log(time, date, month);
-    return `${time}, ${date}\\${month}`;
+    return `${time}, ${date}/${month}`;
   };
 
   return (
@@ -33,7 +33,7 @@ const Emails = (props) => {
                       {email.data.title}
                     </div>
                     <div className="w-1/5 text-right pr-5">
-                      {getTime(email.data.created_utc)}
+                      {getTime(email.data.created)}
                     </div>
                   </div>
                 </div>

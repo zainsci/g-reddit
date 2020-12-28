@@ -28,10 +28,7 @@ const EmailsSection = (props) => {
             <div className="py-1 px-2 w-full border-b">
               <div className="flex justify-between items-center">
                 <div className="flex">
-                  <div
-                    className="flex p-3 rounded-full cursor-pointer hover:bg-gray-200 hover:border"
-                    title="Select"
-                  >
+                  <IconWrapper title="Select">
                     <input
                       type="checkbox"
                       name="select"
@@ -39,19 +36,13 @@ const EmailsSection = (props) => {
                       className="cursor-pointer w-4 h-4"
                       title="Select"
                     />
-                  </div>
-                  <div
-                    className="flex p-3 rounded-full cursor-pointer hover:bg-gray-200 hover:border"
-                    title="Refresh"
-                  >
+                  </IconWrapper>
+                  <IconWrapper title="Refresh">
                     <ArrowClockwise />
-                  </div>
-                  <div
-                    className="flex p-3 rounded-full cursor-pointer hover:bg-gray-200 hover:border"
-                    title="More"
-                  >
+                  </IconWrapper>
+                  <IconWrapper title="More">
                     <DotsVertical />
-                  </div>
+                  </IconWrapper>
                 </div>
                 <div className="">{emails.length}</div>
               </div>
@@ -71,6 +62,17 @@ const EmailsSection = (props) => {
         <div></div>
       )}
     </section>
+  );
+};
+
+const IconWrapper = (props) => {
+  return (
+    <div
+      className="flex p-3 rounded-full cursor-pointer hover:bg-gray-100 hover:border ease-in duration-200"
+      title={props.title}
+    >
+      {props.children}
+    </div>
   );
 };
 
