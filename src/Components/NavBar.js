@@ -1,11 +1,18 @@
+import { useState } from "react";
 import Burger from "../SVGs/Burger";
 import DotGrid from "../SVGs/DotGrid";
 import Search from "../SVGs/Search";
 import Settings from "../SVGs/Settings";
 
 const NavBar = () => {
+  const [search, setSearch] = useState("");
+
   const submitSearch = (e) => {
     e.preventDefault();
+  };
+
+  const getSearch = (e) => {
+    setSearch(e.target.value);
   };
 
   return (
@@ -42,6 +49,8 @@ const NavBar = () => {
               autoComplete="off"
               name="search"
               placeholder="Search Mail"
+              value={search}
+              onChange={getSearch}
             />
           </form>
           <div className="flex">
