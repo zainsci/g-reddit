@@ -23,13 +23,19 @@ const Emails = (props) => {
               <Link key={email.data.id} to={email.data.permalink}>
                 <div className="overflow-hidden text-sm hover:shadow-md">
                   <div className="py-1 px-2 flex items-center font-semibold border-b hover:shadow-md cursor-pointer flex">
-                    <div className="w-1/5 flex items-center overflow-hidden">
+                    <div
+                      className="w-1/5 flex items-center overflow-hidden"
+                      title={email.data.subreddit}
+                    >
                       <div className="p-1.5 mr-2 rounded-full hover:border hover:bg-gray-200">
                         <StarOutline />
                       </div>
                       r/{email.data.subreddit}
                     </div>
-                    <div className="w-3/5 whitespace-nowrap overflow-hidden">
+                    <div
+                      className="w-3/5 whitespace-nowrap overflow-hidden"
+                      title={email.data.title}
+                    >
                       {email.data.title}
                     </div>
                     <div className="w-1/5 text-right pr-5">

@@ -18,10 +18,10 @@ const EmailsSection = (props) => {
   }, []);
 
   return (
-    <section style={{ maxWidth: props.width }}>
+    <section className="w-full" style={{ maxWidth: props.width }}>
       {emails ? (
         <div
-          className={"overflow-hidden"}
+          className="overflow-hidden"
           style={{ height: window.innerHeight - 68 }}
         >
           <Route path="/" exact>
