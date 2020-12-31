@@ -22,14 +22,14 @@ const Email = () => {
   }, [subreddit, id, perma]);
 
   return (
-    <div>
+    <div className="h-full overflow-y-scroll">
       {email ? (
         <>
           <div className="p-3 mb-3">
             <div className="text-xl font-semibold">{email.title}</div>
           </div>
           {email.domain === "i.redd.it" || email.domain === "i.imgur.com" ? (
-            <div className="m-5">
+            <div className="m-5 w-2/5">
               <img src={email.url} alt={email.title} />
             </div>
           ) : null}
