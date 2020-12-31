@@ -6,13 +6,13 @@ const Emails = (props) => {
 
   const getTime = (timestamp) => {
     const d = new Date(timestamp * 1000);
-    const date = d.getDate();
+    const date = d.getUTCDate();
     const month = d.getUTCMonth();
-    const time = `${d.getHours() % 12}:${d.getMinutes()}${
-      d.getHours() > 12 ? "PM" : "AM"
+    const time = `${d.getUTCHours() % 12}:${d.getUTCMinutes()} ${
+      parseInt(d.getUTCHours()) > 12 ? "PM" : "AM"
     }`;
     console.log(time, date, month);
-    return `${time}, ${date}/${month}`;
+    return `${time} - ${date}/${month + 1}`;
   };
 
   return (
@@ -39,7 +39,7 @@ const Emails = (props) => {
                       {email.data.title}
                     </div>
                     <div className="w-1/5 text-right pr-5">
-                      {getTime(email.data.created)}
+                      {getTime(email.data.created_utc)}
                     </div>
                   </div>
                 </div>
