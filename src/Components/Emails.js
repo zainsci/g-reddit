@@ -23,7 +23,7 @@ const Emails = (props) => {
           setEmailsArr(data.data.children);
         });
     }
-  }, []);
+  }, [subreddit]);
 
   const getTime = (timestamp) => {
     const d = new Date(timestamp * 1000);
