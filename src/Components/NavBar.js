@@ -9,6 +9,7 @@ const NavBar = () => {
 
   const submitSearch = (e) => {
     e.preventDefault();
+    window.location.pathname = "/r/" + search;
   };
 
   const getSearch = (e) => {
