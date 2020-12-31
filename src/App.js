@@ -7,12 +7,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Switch>
-          <Route path="/">
-            <NavBar />
-            <Main />
-          </Route>
-        </Switch>
+        <NavBar />
+        <Main />
       </Router>
     </div>
   );
