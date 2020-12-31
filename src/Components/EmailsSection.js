@@ -6,26 +6,22 @@ import Emails from "./Emails";
 const EmailsSection = (props) => {
   return (
     <section className="w-full" style={{ maxWidth: props.width }}>
-      {emails ? (
-        <div
-          className="overflow-hidden"
-          style={{ height: window.innerHeight - 68 }}
-        >
-          <Switch>
-            <Route path="/" exact>
-              <Emails />
-            </Route>
-            <Route path="/r/:subreddit" exact>
-              <Emails />
-            </Route>
-            <Route path="/r/:subreddit/comments/:id/:perma/" exact>
-              <Email />
-            </Route>
-          </Switch>
-        </div>
-      ) : (
-        <div></div>
-      )}
+      <div
+        className="overflow-hidden"
+        style={{ height: window.innerHeight - 68 }}
+      >
+        <Switch>
+          <Route path="/" exact>
+            <Emails />
+          </Route>
+          <Route path="/r/:subreddit" exact>
+            <Emails />
+          </Route>
+          <Route path="/r/:subreddit/comments/:id/:perma/" exact>
+            <Email />
+          </Route>
+        </Switch>
+      </div>
     </section>
   );
 };
